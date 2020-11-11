@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  MenuViewController.swift
 //  squadup
 //
-//  Created by Kelvin Yu on 10/23/20.
+//  Created by Kelvin Yu on 10/28/20.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
-

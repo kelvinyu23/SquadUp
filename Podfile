@@ -8,6 +8,7 @@ target 'squadup' do
   # Pods for squadup
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'SideMenu'
   target 'squadupTests' do
     inherit! :search_paths
     # Pods for testing

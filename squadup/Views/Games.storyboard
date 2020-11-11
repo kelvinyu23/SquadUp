@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qkk-Xi-16P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Games-->
+        <scene sceneID="dls-ce-Fym">
+            <objects>
+                <viewController id="Qkk-Xi-16P" customClass="GamesViewController" customModule="squadup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZGs-zj-r91">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buP-MD-Icp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Qkk-Xi-16P" id="MFl-X8-iHm"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVC-S7-uNG">
+                                <rect key="frame" x="7" y="44" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu"/>
+                                <connections>
+                                    <action selector="sideMenuButton:" destination="Qkk-Xi-16P" eventType="touchUpInside" id="Yt8-nQ-Ypa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvk-hf-xXK">
+                                <rect key="frame" x="175" y="244" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0KK-fN-gkQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="buP-MD-Icp" secondAttribute="bottom" constant="83" id="0S3-Lk-Vlz"/>
+                            <constraint firstItem="0KK-fN-gkQ" firstAttribute="trailing" secondItem="buP-MD-Icp" secondAttribute="trailing" id="5o0-eB-QWJ"/>
+                            <constraint firstAttribute="trailing" secondItem="buP-MD-Icp" secondAttribute="trailing" id="6m1-OL-ORR"/>
+                            <constraint firstItem="buP-MD-Icp" firstAttribute="leading" secondItem="ZGs-zj-r91" secondAttribute="leading" id="KmL-G0-a8V"/>
+                            <constraint firstItem="buP-MD-Icp" firstAttribute="top" secondItem="0KK-fN-gkQ" secondAttribute="top" id="YSy-BX-1MC"/>
+                            <constraint firstItem="0KK-fN-gkQ" firstAttribute="bottom" secondItem="buP-MD-Icp" secondAttribute="bottom" id="rPH-jL-60D"/>
+                            <constraint firstItem="buP-MD-Icp" firstAttribute="top" secondItem="ZGs-zj-r91" secondAttribute="top" id="t01-hy-nWx"/>
+                            <constraint firstItem="buP-MD-Icp" firstAttribute="leading" secondItem="0KK-fN-gkQ" secondAttribute="leading" id="xAe-Fm-aBP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Games" image="games" id="jnq-FX-xHT"/>
+                    <navigationItem key="navigationItem" id="MQa-1o-TqU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="buP-MD-Icp" id="VAu-Fe-u8u"/>
+                        <outlet property="sidebvarMenu" destination="dvk-hf-xXK" id="X9b-a2-W83"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOi-N1-lPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655.072463768116" y="458.70535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="games" width="24" height="24"/>
+        <image name="menu" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
